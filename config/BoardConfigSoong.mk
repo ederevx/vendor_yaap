@@ -36,7 +36,8 @@ SOONG_CONFIG_lineageGlobalVars += \
     target_camera_package_name \
     target_trust_usb_control_path \
     target_trust_usb_control_enable \
-    target_trust_usb_control_disable
+    target_trust_usb_control_disable \
+    uses_gralloc1
 
 SOONG_CONFIG_NAMESPACES += lineageQcomVars
 SOONG_CONFIG_lineageQcomVars += \
@@ -71,6 +72,7 @@ TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT ?= false
 TARGET_TRUST_USB_CONTROL_PATH ?= /proc/sys/kernel/deny_new_usb
 TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
+TARGET_USES_GRALLOC1 ?= false
 
 # Soong value variables
 SOONG_CONFIG_lineageGlobalVars_camera_skip_kind_check := $(CAMERA_SKIP_KIND_CHECK)
@@ -86,6 +88,7 @@ SOONG_CONFIG_lineageGlobalVars_sdmcore_has_is_display_hw_available_func := $(TAR
 SOONG_CONFIG_lineageGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_lineageGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_lineageGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
+SOONG_CONFIG_lineageGlobalVars_uses_gralloc1 := $(TARGET_USES_GRALLOC1)
 SOONG_CONFIG_lineageQcomVars_should_wait_for_qsee := $(TARGET_KEYMASTER_WAIT_FOR_QSEE)
 SOONG_CONFIG_lineageQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_lineageQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
